@@ -11,7 +11,7 @@ const Hero = () => {
 
       <Section yPadding="pt-20 pb-32 text-center">
         <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
-          Building bold ideas — from vision, with precision.
+          Building Bold Ideas With Vision and Precision.
         </h1>
 
         <p className="mx-auto mt-6 max-w-xl text-lg text-gray-300">

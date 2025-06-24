@@ -36,7 +36,6 @@ const Products = () => (
     id="products"
     bgColor="bg-[#0B101B]"
     title="Products. Platforms. Possibilities."
-    description="From platforms to products — built to explore what's possible."
   >
     <ProductRow
       title="Attronaut"
