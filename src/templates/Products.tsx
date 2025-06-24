@@ -13,8 +13,8 @@ const ProductRow = ({
 }: {
   title: string;
   description: string;
-  image: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
   contact: React.ReactNode;
   reverse?: boolean;
 }) => {
@@ -32,18 +32,20 @@ const ProductRow = ({
       <div className="w-full text-center sm:w-1/2 sm:px-6">
         <h3 className="text-2xl font-bold text-white">{title}</h3>
         <p className="mt-4 text-lg text-gray-200">{description}</p>
-        <div className="mt-4 text-sm text-gray-300">{contact}</div>
+        <div className="mt-6 space-y-1 text-sm text-gray-300">{contact}</div>
       </div>
 
-      <div className="flex w-full justify-center p-6 sm:w-1/2">
-        <div className="flex h-[320px] w-full items-center justify-center">
-          <img
-            src={`${router.basePath}${image}`}
-            alt={imageAlt}
-            className="mx-auto max-h-[300px] rounded-lg object-contain shadow-lg ring-1 ring-white/10 transition-shadow duration-300 hover:shadow-xl"
-          />
+      {image && (
+        <div className="flex w-full justify-center p-6 sm:w-1/2">
+          <div className="flex h-[320px] w-full items-center justify-center">
+            <img
+              src={`${router.basePath}${image}`}
+              alt={imageAlt || title}
+              className="mx-auto max-h-[300px] rounded-lg object-contain shadow-lg ring-1 ring-white/10 transition-shadow duration-300 hover:shadow-xl"
+            />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
@@ -63,7 +65,7 @@ const Products = () => (
       contact={
         <>
           <p>
-            Website:{' '}
+            <strong>Website:</strong>{' '}
             <a
               href="https://attronaut.com"
               className="underline hover:text-white"
@@ -73,13 +75,19 @@ const Products = () => (
               attronaut.com
             </a>
           </p>
-          <p>General: hello@attronaut.com</p>
-          <p>Support: support@attronaut.com</p>
           <p>
-            Partnerships & Platform Access (OAuth, Permissions):
+            <strong>General:</strong> hello@attronaut.com
+          </p>
+          <p>
+            <strong>Support:</strong> support@attronaut.com
+          </p>
+          <p>
+            <strong>
+              Partnerships & Platform Access (OAuth, Permissions):
+            </strong>{' '}
             mgmt@attronaut.com
           </p>
-          <p className="mt-1 text-xs text-gray-400">
+          <p className="mt-2 text-xs text-gray-400">
             Attronaut is designed to support secure integration with ad
             platforms like Meta, Google, TikTok, Klaviyo, and more.
           </p>
@@ -95,7 +103,7 @@ const Products = () => (
       contact={
         <>
           <p>
-            Website:{' '}
+            <strong>Website:</strong>{' '}
             <a
               href="https://artofficialdimensions.com"
               className="underline hover:text-white"
@@ -105,8 +113,12 @@ const Products = () => (
               artofficialdimensions.com
             </a>
           </p>
-          <p>General: hello@artofficialdimensions.com</p>
-          <p>Support: support@artofficialdimensions.com</p>
+          <p>
+            <strong>General:</strong> hello@artofficialdimensions.com
+          </p>
+          <p>
+            <strong>Support:</strong> support@artofficialdimensions.com
+          </p>
         </>
       }
       reverse
