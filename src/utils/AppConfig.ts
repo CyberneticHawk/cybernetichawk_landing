@@ -1,7 +1,7 @@
 export const AppConfig = {
-  site_name: 'Attronaut',
-  title: 'Attronaut – Connect Ad Spend to Revenue',
+  site_name: 'Cybernetic Hawk',
+  title: 'Cybernetic Hawk – Launchpad for Bold Ideas',
   description:
-    'Attronaut helps Shopify brands see which campaigns truly drive profit. Connect ad spend to real revenue and scale confidently.',
+    'Cybernetic Hawk supports ventures that challenge convention — from growth technology to futuristic design. We help new concepts take flight.',
   locale: 'en',
 };
