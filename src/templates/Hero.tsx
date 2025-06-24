@@ -19,15 +19,15 @@ const Hero = () => {
           title={
             <>
               <span className="text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
-                Exploring New Frontiers in Technology & Design.
+                See Further. Build Smarter.
               </span>
               {'\n'}
               <span className="text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
-                Cybernetic Hawk is the launchpad for bold ideas.
+                Cybernetic Hawk helps bold ideas take flight.
               </span>
             </>
           }
-          description="We support ventures that push boundaries — from SaaS platforms to space-inspired consumer products. Where innovation takes flight, we help it land."
+          description="We partner with ambitious ventures to scale, adapt, and land — across industries, platforms, and uncharted terrain. From technology to design, we turn vision into reality."
           button={null}
         />
 

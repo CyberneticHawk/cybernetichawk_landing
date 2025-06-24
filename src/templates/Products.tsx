@@ -54,8 +54,8 @@ const Products = () => (
   <Section
     id="products"
     bgColor="bg-[#0B101B]"
-    title="Our Orbit — Products"
-    description="Cybernetic Hawk supports ventures that push boundaries — from growth technology to futuristic consumer design."
+    title="Products. Platforms. Possibilities."
+    description="Cybernetic Hawk supports technology and design that push boundaries — from growth platforms to space-inspired consumer products."
   >
     <ProductRow
       title="Attronaut"
@@ -124,7 +124,7 @@ const Products = () => (
       reverse
     />
 
-    {/* 🌙 Inverted Orbit Divider */}
+    {/* Divider */}
     <div className="relative mt-12">
       <svg
         viewBox="0 0 100 10"
