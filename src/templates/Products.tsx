@@ -1,20 +1,15 @@
 import classNames from 'classnames';
-import { useRouter } from 'next/router';
 
 import { Section } from '../layout/Section';
 
 const ProductRow = ({
   title,
   description,
-  image,
-  imageAlt,
   contact,
   reverse,
 }: {
   title: string;
   description: string;
-  image?: string;
-  imageAlt?: string;
   contact: React.ReactNode;
   reverse?: boolean;
 }) => {
@@ -25,27 +20,13 @@ const ProductRow = ({
     },
   );
 
-  const router = useRouter();
-
   return (
     <div className={rowClass}>
-      <div className="w-full text-center sm:w-1/2 sm:px-6">
+      <div className="w-full text-center sm:w-2/3 sm:px-6">
         <h3 className="text-2xl font-bold text-white">{title}</h3>
         <p className="mt-4 text-lg text-gray-200">{description}</p>
         <div className="mt-6 space-y-1 text-sm text-gray-300">{contact}</div>
       </div>
-
-      {image && (
-        <div className="flex w-full justify-center p-6 sm:w-1/2">
-          <div className="flex h-[320px] w-full items-center justify-center">
-            <img
-              src={`${router.basePath}${image}`}
-              alt={imageAlt || title}
-              className="mx-auto max-h-[300px] rounded-lg object-contain shadow-lg ring-1 ring-white/10 transition-shadow duration-300 hover:shadow-xl"
-            />
-          </div>
-        </div>
-      )}
     </div>
   );
 };
@@ -60,8 +41,6 @@ const Products = () => (
     <ProductRow
       title="Attronaut"
       description="A B2B SaaS platform helping Shopify retailers decode attribution and guide their growth. Attronaut provides the tools to track, optimize, and steer confidently through the evolving ad ecosystem."
-      image="/assets/images/attronaut-preview.png"
-      imageAlt="Attronaut Platform"
       contact={
         <>
           <p>
@@ -76,16 +55,33 @@ const Products = () => (
             </a>
           </p>
           <p>
-            <strong>General:</strong> hello@attronaut.com
+            <strong>General:</strong>{' '}
+            <a
+              href="mailto:hello@attronaut.com"
+              className="underline hover:text-white"
+            >
+              hello@attronaut.com
+            </a>
           </p>
           <p>
-            <strong>Support:</strong> support@attronaut.com
+            <strong>Support:</strong>{' '}
+            <a
+              href="mailto:support@attronaut.com"
+              className="underline hover:text-white"
+            >
+              support@attronaut.com
+            </a>
           </p>
           <p>
             <strong>
               Partnerships & Platform Access (OAuth, Permissions):
             </strong>{' '}
-            mgmt@attronaut.com
+            <a
+              href="mailto:mgmt@attronaut.com"
+              className="underline hover:text-white"
+            >
+              mgmt@attronaut.com
+            </a>
           </p>
           <p className="mt-2 text-xs text-gray-400">
             Attronaut is designed to support secure integration with ad
@@ -96,10 +92,8 @@ const Products = () => (
     />
 
     <ProductRow
-      title="Artofficial Dimensions"
+      title="ArtOfficial Dimensions"
       description="Space-inspired home decor merging form, function, and futurism. From ambient lighting to functional art, we create products that bring the future home."
-      image="/assets/images/artofficialdimensions-preview.png"
-      imageAlt="Artofficial Dimensions Product"
       contact={
         <>
           <p>
@@ -114,10 +108,22 @@ const Products = () => (
             </a>
           </p>
           <p>
-            <strong>General:</strong> hello@artofficialdimensions.com
+            <strong>General:</strong>{' '}
+            <a
+              href="mailto:hello@artofficialdimensions.com"
+              className="underline hover:text-white"
+            >
+              hello@artofficialdimensions.com
+            </a>
           </p>
           <p>
-            <strong>Support:</strong> support@artofficialdimensions.com
+            <strong>Support:</strong>{' '}
+            <a
+              href="mailto:support@artofficialdimensions.com"
+              className="underline hover:text-white"
+            >
+              support@artofficialdimensions.com
+            </a>
           </p>
         </>
       }
