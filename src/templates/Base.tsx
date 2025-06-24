@@ -2,7 +2,7 @@ import { Meta } from '../layout/Meta';
 import { AppConfig } from '../utils/AppConfig';
 import { Footer } from './Footer';
 import { Hero } from './Hero';
-import { VerticalFeatures } from './VerticalFeatures';
+import { Products } from './Products';
 
 const Base = () => (
   <div className="bg-brand-dark text-gray-600 antialiased">
@@ -69,7 +69,7 @@ const Base = () => (
       `}</style>
     </div>
 
-    <VerticalFeatures />
+    <Products />
     <Footer />
   </div>
 );
