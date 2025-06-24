@@ -1,5 +1,4 @@
 import { Background } from '../background/Background';
-import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
 import { Nav } from '../navigation/Nav';
 
@@ -10,22 +9,15 @@ const Hero = () => {
         <Nav />
       </Section>
 
-      <Section yPadding="pt-20 pb-32">
-        <HeroOneButton
-          title={
-            <>
-              <span className="text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
-                See Further. Build Smarter.
-              </span>
-              {'\n'}
-              <span className="text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
-                Cybernetic Hawk helps bold ideas take flight.
-              </span>
-            </>
-          }
-          description="We partner with ambitious ventures to scale, adapt, and land — across industries, platforms, and uncharted terrain. From technology to design, we turn vision into reality."
-          button={null}
-        />
+      <Section yPadding="pt-20 pb-32 text-center">
+        <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+          Building bold ideas — from vision, with precision.
+        </h1>
+
+        <p className="mx-auto mt-6 max-w-xl text-lg text-gray-300">
+          Cybernetic Hawk is the nest for products ready to take flight —
+          aligned by technology and strategy.
+        </p>
       </Section>
     </Background>
   );

@@ -36,11 +36,11 @@ const Products = () => (
     id="products"
     bgColor="bg-[#0B101B]"
     title="Products. Platforms. Possibilities."
-    description="Cybernetic Hawk supports technology and design that push boundaries — from growth platforms to space-inspired consumer products."
+    description="From platforms to products — built to explore what's possible."
   >
     <ProductRow
       title="Attronaut"
-      description="A B2B SaaS platform helping Shopify retailers decode attribution and guide their growth. Attronaut provides the tools to track, optimize, and steer confidently through the evolving ad ecosystem."
+      description="A B2B platform helping Shopify brands decode attribution and grow with clarity. Attronaut works behind the scenes to track performance, connect the dots, and guide better decisions."
       contact={
         <>
           <p>
@@ -92,7 +92,7 @@ const Products = () => (
     />
 
     <ProductRow
-      title="ArtOfficial Dimensions"
+      title="ArtOfficialDimensions"
       description="Space-inspired home decor merging form, function, and futurism. From ambient lighting to functional art, we create products that bring the future home."
       contact={
         <>
