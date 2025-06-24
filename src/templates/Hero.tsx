@@ -19,15 +19,15 @@ const Hero = () => {
           title={
             <>
               <span className="text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
-                Navigate Ad Channels with Confidence.
+                Exploring New Frontiers in Technology & Design.
               </span>
               {'\n'}
               <span className="text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
-                Discover the Attribution That Directs Your Next Move.
+                Cybernetic Hawk is the launchpad for bold ideas.
               </span>
             </>
           }
-          description="Attronaut is your growth navigator — built to map what works, recommend what&rsquo;s next, and steer every campaign toward measurable impact."
+          description="We support ventures that push boundaries — from SaaS platforms to space-inspired consumer products. Where innovation takes flight, we help it land."
           button={null}
         />
 
@@ -54,7 +54,7 @@ const Hero = () => {
                 type="submit"
                 className="rounded-md bg-white px-6 py-2 font-semibold text-black hover:bg-gray-100"
               >
-                Get Early Access
+                Stay in the Loop
               </button>
             </form>
           ) : (
@@ -64,7 +64,7 @@ const Hero = () => {
           )}
 
           <p className="mt-4 text-center text-sm text-gray-400">
-            Free for early adopters. No credit card required.
+            We only send occasional updates — no spam.
           </p>
         </div>
       </Section>
