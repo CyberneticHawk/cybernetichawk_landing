@@ -13,16 +13,16 @@ const Nav = () => (
     </div>
 
     <nav>
-      <ul className="flex items-center text-xl font-medium text-white">
+      <ul className="flex items-center space-x-6 text-sm font-medium text-white sm:text-base">
         <li>
           <Link
-            href="#product"
+            href="#products"
             className="transition-colors hover:text-primary"
           >
-            Product
+            Products
           </Link>
         </li>
-        <li className="ml-6">
+        <li>
           <Link href="#about" className="transition-colors hover:text-primary">
             About
           </Link>
