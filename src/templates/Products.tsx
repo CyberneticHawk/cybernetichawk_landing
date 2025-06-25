@@ -72,9 +72,7 @@ const Products = () => (
             </a>
           </p>
           <p>
-            <strong>
-              Partnerships & Platform Access (OAuth, Permissions):
-            </strong>{' '}
+            <strong>Partnerships & Platform Access:</strong>{' '}
             <a
               href="mailto:mgmt@attronaut.com"
               className="underline hover:text-white"
@@ -128,21 +126,6 @@ const Products = () => (
       }
       reverse
     />
-
-    {/* Divider */}
-    <div className="relative mt-12">
-      <svg
-        viewBox="0 0 100 10"
-        preserveAspectRatio="none"
-        className="mx-auto h-6 w-full max-w-4xl rotate-180 text-white opacity-10"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="0.6"
-        strokeDasharray="3 2"
-      >
-        <path d="M0,10 Q50,0 100,10" />
-      </svg>
-    </div>
   </Section>
 );
 

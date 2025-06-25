@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Logo } from '../templates/Logo';
 
 const Nav = () => (
-  <div className="flex flex-col">
+  <header className="flex flex-col">
     <div className="flex flex-wrap items-center justify-between py-4">
       <div>
         <Link href="/">
@@ -18,13 +18,16 @@ const Nav = () => (
           <li>
             <Link
               href="#products"
-              className="hover:text-accent transition-colors"
+              className="hover:text-accent underline-offset-4 transition-colors hover:underline"
             >
               Products
             </Link>
           </li>
           <li>
-            <Link href="#about" className="hover:text-accent transition-colors">
+            <Link
+              href="#about"
+              className="hover:text-accent underline-offset-4 transition-colors hover:underline"
+            >
               About
             </Link>
           </li>
@@ -32,9 +35,23 @@ const Nav = () => (
       </nav>
     </div>
 
-    {/* Divider under entire nav */}
-    <div className="bg-accent h-0.5 w-full opacity-30" />
-  </div>
+    {/* Circuit-Inspired Divider */}
+    <div className="relative mt-2">
+      <svg
+        viewBox="0 0 100 2"
+        preserveAspectRatio="none"
+        className="text-accent mx-auto h-2 w-full opacity-30"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="0.5"
+      >
+        <line x1="0" y1="1" x2="100" y2="1" />
+        <circle cx="20" cy="1" r="0.5" />
+        <circle cx="50" cy="1" r="0.5" />
+        <circle cx="80" cy="1" r="0.5" />
+      </svg>
+    </div>
+  </header>
 );
 
 export { Nav };
