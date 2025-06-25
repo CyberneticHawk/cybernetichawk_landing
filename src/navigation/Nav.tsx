@@ -17,7 +17,7 @@ const Nav = () => (
         <ul className="flex items-center space-x-6 text-sm font-medium text-white sm:text-base">
           <li>
             <Link
-              href="#products"
+              href="/#products"
               className="hover:text-accent underline-offset-4 transition-colors hover:underline"
             >
               Products
