@@ -9,8 +9,7 @@ const AboutPage = () => (
       title="About - Cybernetic Hawk"
       description="Learn more about Cybernetic Hawk."
     />
-    {/* REMOVE the extra header with px-4 */}
-    <Nav />
+    <Nav /> {/* Don't wrap Nav with extra padding */}
     <main className="px-4 py-20 text-center sm:px-6 lg:px-8">
       <About />
     </main>
