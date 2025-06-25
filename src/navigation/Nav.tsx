@@ -16,15 +16,15 @@ const Nav = () => (
       <ul className="flex items-center text-xl font-medium text-white">
         <li>
           <Link
-            href="#features"
+            href="#product"
             className="transition-colors hover:text-primary"
           >
-            Features
+            Product
           </Link>
         </li>
         <li className="ml-6">
-          <Link href="#portal" className="transition-colors hover:text-primary">
-            Portal
+          <Link href="#about" className="transition-colors hover:text-primary">
+            About
           </Link>
         </li>
       </ul>
