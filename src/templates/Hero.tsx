@@ -9,7 +9,7 @@ const Hero = () => {
         <Nav />
       </Section>
 
-      <Section yPadding="pt-20 pb-32 text-center">
+      <Section yPadding="pt-20 pb-16 text-center">
         <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
           Building Bold Ideas With Vision and Precision.
         </h1>
