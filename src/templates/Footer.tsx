@@ -24,13 +24,13 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href={isAboutPage ? '/' : '/#products'}>
+              <Link href={isAboutPage ? '/#products' : '#products'}>
                 <span className="hover:underline">Products</span>
               </Link>
             </li>
             <li>
               {isAboutPage ? (
-                <span className="cursor-default text-gray-400">About</span>
+                <span className="text-gray-400">About</span>
               ) : (
                 <Link href="/about">
                   <span className="hover:underline">About</span>
