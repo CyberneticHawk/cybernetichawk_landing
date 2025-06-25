@@ -6,7 +6,7 @@ const Nav = () => (
   <div className="flex flex-wrap items-center justify-between py-4">
     <div>
       <Link href="/">
-        <span className="cursor-pointer text-white hover:text-primary">
+        <span className="hover:text-accent cursor-pointer text-white transition-colors">
           <Logo />
         </span>
       </Link>
@@ -17,13 +17,16 @@ const Nav = () => (
         <li>
           <Link
             href="#products"
-            className="transition-colors hover:text-primary"
+            className="hover:text-accent after:bg-accent relative transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:transition-all hover:after:w-full"
           >
             Products
           </Link>
         </li>
         <li>
-          <Link href="#about" className="transition-colors hover:text-primary">
+          <Link
+            href="#about"
+            className="hover:text-accent after:bg-accent relative transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:transition-all hover:after:w-full"
+          >
             About
           </Link>
         </li>
