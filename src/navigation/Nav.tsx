@@ -25,7 +25,7 @@ const Nav = () => (
           </li>
           <li>
             <Link
-              href="#about"
+              href="/about"
               className="hover:text-accent underline-offset-4 transition-colors hover:underline"
             >
               About
