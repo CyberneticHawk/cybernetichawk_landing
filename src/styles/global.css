@@ -2,10 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+:target {
+  scroll-margin-top: 80px; /* Adjust this value based on your Nav height */
+}
+
 html,
 body {
   background-color: #0B101B;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 .bg-stars::before {

@@ -15,7 +15,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        'brand-dark': '#0B101B', // ✅ Flat key, NOT nested inside 'background'
+        'brand-dark': '#0B101B',
+
+        pinkAccent: '#B957CE',
 
         primary: {
           100: '#E6F0FA',
@@ -30,10 +32,6 @@ module.exports = {
           light: '#5994CE',
           DEFAULT: '#3A4E93',
           dark: '#5C58BB',
-        },
-
-        accent: {
-          pink: '#B957CE',
         },
 
         gray: {

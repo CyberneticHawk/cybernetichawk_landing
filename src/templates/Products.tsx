@@ -39,59 +39,66 @@ const cardVariants = {
 const Products = () => (
   <Section
     id="products"
-    bgColor="bg-[#0B101B]"
+    yPadding="pt-10 pb-6"
     title="Products. Platforms. Possibilities."
   >
-    <div className="bg-accent/50 mx-auto mb-6 mt-2 h-0.5 w-20 blur-sm"></div>
+    <div className="relative z-10 text-center">
+      <div className="mx-auto mb-6 mt-2 h-0.5 w-20 bg-pinkAccent/50 blur-sm"></div>
 
-    <div className="grid gap-8 sm:grid-cols-2">
-      {products.map((product, index) => (
-        <motion.div
-          key={index}
-          custom={index}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={cardVariants}
-          className="hover:border-accent hover:ring-accent/40 group rounded-xl border border-gray-700 bg-[#111827] p-6 text-center shadow-lg transition hover:scale-[1.04] hover:bg-[#151b29] hover:shadow-2xl hover:ring-2"
-        >
-          <h3 className="group-hover:text-accent mb-2 text-2xl font-semibold text-white transition">
-            {product.title}
-          </h3>
-          <p className="mb-4 text-gray-300">{product.description}</p>
+      <div className="grid gap-8 sm:grid-cols-2">
+        {products.map((product, index) => (
+          <motion.div
+            key={index}
+            custom={index}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={cardVariants}
+            className="group relative overflow-hidden rounded-xl border border-gray-700 bg-[#111827]/80 p-6 text-center shadow-lg backdrop-blur-lg transition hover:scale-[1.04] hover:border-pinkAccent hover:bg-[#151b29] hover:shadow-2xl hover:ring-2 hover:ring-pinkAccent/40"
+          >
+            {/* Subtle Glow Behind Card */}
+            <div className="absolute inset-0 -z-10 flex items-center justify-center">
+              <div className="size-64 rounded-full bg-pinkAccent/20 opacity-40 blur-3xl"></div>
+            </div>
 
-          <div className="mx-auto mb-4 max-w-xs space-y-1 text-left text-sm text-gray-300">
-            <p>
-              <strong>Website:</strong>{' '}
-              <a
-                href={product.website}
-                className="break-all underline hover:text-white"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {product.website.replace('https://', '')}
-              </a>
-            </p>
-            {product.contacts.map((contact, idx) => (
-              <p key={idx}>
-                <strong>{contact.label}:</strong>{' '}
+            <h3 className="mb-2 text-2xl font-semibold text-white transition group-hover:text-pinkAccent">
+              {product.title}
+            </h3>
+            <p className="mb-4 text-gray-300">{product.description}</p>
+
+            <div className="mx-auto mb-4 max-w-xs space-y-1 text-left text-sm text-gray-300">
+              <p>
+                <strong>Website:</strong>{' '}
                 <a
-                  href={`mailto:${contact.email}`}
+                  href={product.website}
                   className="break-all underline hover:text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {contact.email}
+                  {product.website.replace('https://', '')}
                 </a>
               </p>
-            ))}
-          </div>
+              {product.contacts.map((contact, idx) => (
+                <p key={idx}>
+                  <strong>{contact.label}:</strong>{' '}
+                  <a
+                    href={`mailto:${contact.email}`}
+                    className="break-all underline hover:text-white"
+                  >
+                    {contact.email}
+                  </a>
+                </p>
+              ))}
+            </div>
 
-          {product.note && (
-            <p className="mx-auto mt-2 max-w-xs text-left text-xs text-gray-400">
-              {product.note}
-            </p>
-          )}
-        </motion.div>
-      ))}
+            {product.note && (
+              <p className="mx-auto mt-2 max-w-xs text-left text-xs text-gray-400">
+                {product.note}
+              </p>
+            )}
+          </motion.div>
+        ))}
+      </div>
     </div>
   </Section>
 );

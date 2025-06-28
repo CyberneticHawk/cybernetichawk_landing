@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { Logo } from '../templates/Logo';
 
 const Nav = () => (
-  <header className="flex flex-col">
-    <div className="flex flex-wrap items-center justify-between py-4">
+  <header className="flex flex-col py-4">
+    <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between px-4 sm:px-6 lg:px-8">
       <div>
-        <Link href="/">
-          <span className="hover:text-accent cursor-pointer text-white transition-colors">
+        <Link href="/" scroll={false}>
+          <span className="cursor-pointer text-white transition-colors hover:text-pinkAccent">
             <Logo />
           </span>
         </Link>
@@ -16,19 +16,17 @@ const Nav = () => (
       <nav>
         <ul className="flex items-center space-x-6 text-sm font-medium text-white sm:text-base">
           <li>
-            <Link
-              href="/#products"
-              className="hover:text-accent hover:shadow-accent/70 rounded px-2 py-1 underline-offset-4 transition-colors hover:underline hover:shadow-[0_0_8px]"
-            >
-              Products
+            <Link href="/#products" scroll={false}>
+              <span className="rounded px-2 py-1 underline-offset-4 transition-colors hover:text-pinkAccent hover:underline hover:shadow-[0_0_8px] hover:shadow-pinkAccent/70">
+                Products
+              </span>
             </Link>
           </li>
           <li>
-            <Link
-              href="/about"
-              className="hover:text-accent hover:shadow-accent/70 rounded px-2 py-1 underline-offset-4 transition-colors hover:underline hover:shadow-[0_0_8px]"
-            >
-              About
+            <Link href="/about" scroll={false}>
+              <span className="rounded px-2 py-1 underline-offset-4 transition-colors hover:text-pinkAccent hover:underline hover:shadow-[0_0_8px] hover:shadow-pinkAccent/70">
+                About
+              </span>
             </Link>
           </li>
         </ul>
@@ -36,11 +34,11 @@ const Nav = () => (
     </div>
 
     {/* Circuit-Inspired Divider */}
-    <div className="relative mt-2">
+    <div className="relative mx-auto mt-2 w-full max-w-7xl px-4 sm:px-6 lg:px-8">
       <svg
         viewBox="0 0 100 2"
         preserveAspectRatio="none"
-        className="text-accent mx-auto h-2 w-full opacity-30"
+        className="mx-auto h-2 w-full text-pinkAccent opacity-30"
         fill="none"
         stroke="currentColor"
         strokeWidth="0.5"

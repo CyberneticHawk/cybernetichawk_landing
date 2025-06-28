@@ -1,27 +1,25 @@
 import { motion } from 'framer-motion';
 
-import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
-import { Nav } from '../navigation/Nav';
 
 const Hero = () => {
   return (
-    <Background color="bg-brand-dark relative overflow-hidden">
-      <Section yPadding="py-4">
-        <Nav />
-      </Section>
+    <div className="relative overflow-hidden">
+      {/* Subtle Tech/Hawk Background contained to Hero */}
+      <div
+        className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-5"
+        style={{ backgroundImage: "url('/hawk-tech-bg.png')" }}
+      ></div>
 
-      <Section yPadding="pt-10 pb-6 text-center relative">
-        {/* Feature Card Container */}
+      <Section yPadding="pt-10 pb-6 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="border-accent/30 relative z-10 mx-auto max-w-2xl rounded-2xl border bg-[#111827]/80 px-8 py-10 shadow-xl backdrop-blur-lg"
+          className="relative mx-auto max-w-2xl rounded-2xl border border-pinkAccent/30 bg-[#111827]/80 px-8 py-10 shadow-xl backdrop-blur-lg"
         >
-          {/* Glow Accent Behind */}
           <div className="absolute inset-0 -z-10 flex items-center justify-center">
-            <div className="bg-accent/20 size-64 rounded-full opacity-60 blur-3xl"></div>
+            <div className="size-64 rounded-full bg-pinkAccent/20 opacity-60 blur-3xl"></div>
           </div>
 
           <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
@@ -33,11 +31,10 @@ const Hero = () => {
             aligned by technology and strategy.
           </p>
 
-          {/* Subtle Divider */}
-          <div className="bg-accent/50 mx-auto mt-6 h-0.5 w-24 blur-sm"></div>
+          <div className="mx-auto mt-6 h-0.5 w-24 bg-pinkAccent/50 blur-sm"></div>
         </motion.div>
       </Section>
-    </Background>
+    </div>
   );
 };
 
