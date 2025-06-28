@@ -18,7 +18,7 @@ const Nav = () => (
           <li>
             <Link
               href="/#products"
-              className="hover:text-accent underline-offset-4 transition-colors hover:underline"
+              className="hover:text-accent hover:shadow-accent/70 rounded px-2 py-1 underline-offset-4 transition-colors hover:underline hover:shadow-[0_0_8px]"
             >
               Products
             </Link>
@@ -26,7 +26,7 @@ const Nav = () => (
           <li>
             <Link
               href="/about"
-              className="hover:text-accent underline-offset-4 transition-colors hover:underline"
+              className="hover:text-accent hover:shadow-accent/70 rounded px-2 py-1 underline-offset-4 transition-colors hover:underline hover:shadow-[0_0_8px]"
             >
               About
             </Link>

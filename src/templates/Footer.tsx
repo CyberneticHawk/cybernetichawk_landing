@@ -17,15 +17,19 @@ const Footer = () => {
             <Logo />
           </div>
 
-          <ul className="mb-4 flex justify-center space-x-6">
+          <ul className="mb-4 flex justify-center space-x-6 text-sm sm:text-base">
             <li>
               <Link href="/">
-                <span className="hover:underline">Home</span>
+                <span className="hover:shadow-accent/70 rounded px-2 py-1 transition hover:underline hover:shadow-[0_0_8px]">
+                  Home
+                </span>
               </Link>
             </li>
             <li>
               <Link href={isAboutPage ? '/#products' : '#products'}>
-                <span className="hover:underline">Products</span>
+                <span className="hover:shadow-accent/70 rounded px-2 py-1 transition hover:underline hover:shadow-[0_0_8px]">
+                  Products
+                </span>
               </Link>
             </li>
             <li>
@@ -33,13 +37,17 @@ const Footer = () => {
                 <span className="text-gray-400">About</span>
               ) : (
                 <Link href="/about">
-                  <span className="hover:underline">About</span>
+                  <span className="hover:shadow-accent/70 rounded px-2 py-1 transition hover:underline hover:shadow-[0_0_8px]">
+                    About
+                  </span>
                 </Link>
               )}
             </li>
             <li>
               <a href="mailto:mgmt@cybernetichawk.com">
-                <span className="hover:underline">Contact</span>
+                <span className="hover:shadow-accent/70 rounded px-2 py-1 transition hover:underline hover:shadow-[0_0_8px]">
+                  Contact
+                </span>
               </a>
             </li>
           </ul>
