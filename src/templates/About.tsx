@@ -7,7 +7,7 @@ const About = () => (
     <div className="relative mx-auto max-w-3xl rounded-xl border border-pinkAccent/30 bg-[#111827]/80 p-8 text-center shadow-xl backdrop-blur-lg">
       {/* Balanced Pink Glow Behind */}
       <div className="absolute inset-0 -z-10 flex items-center justify-center">
-        <div className="size-40 rounded-full bg-pinkAccent/20 opacity-40 blur-2xl"></div>
+        <div className="size-48 rounded-full bg-pinkAccent/20 opacity-50 blur-3xl"></div>
       </div>
 
       <motion.div

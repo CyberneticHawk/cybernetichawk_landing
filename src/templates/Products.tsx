@@ -32,7 +32,7 @@ const cardVariants = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.2, duration: 0.6 },
+    transition: { delay: i * 0.15, duration: 0.5 },
   }),
 };
 
@@ -43,7 +43,7 @@ const Products = () => (
     title="Products. Platforms. Possibilities."
   >
     <div className="relative z-10 text-center">
-      <div className="mx-auto mb-6 mt-2 h-0.5 w-20 bg-pinkAccent/50 blur-sm"></div>
+      <div className="mx-auto mb-6 mt-2 h-0.5 w-24 bg-pinkAccent/50 blur-sm"></div>
 
       <div className="grid gap-8 sm:grid-cols-2">
         {products.map((product, index) => (
@@ -54,16 +54,24 @@ const Products = () => (
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={cardVariants}
-            className="group relative overflow-hidden rounded-xl border border-gray-700 bg-[#111827]/80 p-6 text-center shadow-lg backdrop-blur-lg transition hover:scale-[1.04] hover:border-pinkAccent hover:bg-[#151b29] hover:shadow-2xl hover:ring-2 hover:ring-pinkAccent/40"
+            className="group relative overflow-hidden rounded-xl border border-gray-700 bg-[#111827]/80 p-6 text-center shadow-lg backdrop-blur-lg transition hover:scale-105 hover:border-pinkAccent hover:bg-[#151b29] hover:shadow-2xl hover:ring-2 hover:ring-pinkAccent/40"
           >
-            {/* Subtle Glow Behind Card */}
+            {/* Glow Behind Card */}
             <div className="absolute inset-0 -z-10 flex items-center justify-center">
-              <div className="size-64 rounded-full bg-pinkAccent/20 opacity-40 blur-3xl"></div>
+              <div className="size-56 rounded-full bg-pinkAccent/20 opacity-40 blur-3xl transition-transform group-hover:scale-110"></div>
             </div>
 
-            <h3 className="mb-2 text-2xl font-semibold text-white transition group-hover:text-pinkAccent">
-              {product.title}
+            <h3 className="mb-2 text-2xl font-semibold text-white transition">
+              <a
+                href={product.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-pinkAccent hover:underline"
+              >
+                {product.title}
+              </a>
             </h3>
+
             <p className="mb-4 text-gray-300">{product.description}</p>
 
             <div className="mx-auto mb-4 max-w-xs space-y-1 text-left text-sm text-gray-300">
@@ -71,9 +79,9 @@ const Products = () => (
                 <strong>Website:</strong>{' '}
                 <a
                   href={product.website}
-                  className="break-all underline hover:text-white"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="break-all text-pinkAccent hover:underline"
                 >
                   {product.website.replace('https://', '')}
                 </a>
@@ -83,7 +91,7 @@ const Products = () => (
                   <strong>{contact.label}:</strong>{' '}
                   <a
                     href={`mailto:${contact.email}`}
-                    className="break-all underline hover:text-white"
+                    className="break-all text-pinkAccent hover:underline"
                   >
                     {contact.email}
                   </a>

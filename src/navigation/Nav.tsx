@@ -29,6 +29,13 @@ const Nav = () => (
               </span>
             </Link>
           </li>
+          <li>
+            <Link href="/contact" scroll={false}>
+              <span className="rounded px-2 py-1 underline-offset-4 transition-colors hover:text-pinkAccent hover:underline hover:shadow-[0_0_8px] hover:shadow-pinkAccent/70">
+                Contact
+              </span>
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
