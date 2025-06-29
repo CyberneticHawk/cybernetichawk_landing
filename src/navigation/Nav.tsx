@@ -4,7 +4,8 @@ import { Logo } from '../templates/Logo';
 
 const Nav = () => (
   <header className="flex flex-col py-4">
-    <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between px-4 sm:px-6 lg:px-8">
+    <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      {/* Logo Left */}
       <div>
         <Link href="/" scroll={false}>
           <span className="cursor-pointer text-white transition-colors hover:text-pinkAccent">
@@ -13,8 +14,9 @@ const Nav = () => (
         </Link>
       </div>
 
+      {/* Links Right */}
       <nav>
-        <ul className="flex items-center space-x-6 text-sm font-medium text-white sm:text-base">
+        <ul className="flex space-x-6 text-sm font-medium text-white sm:text-base">
           <li>
             <Link href="/#products" scroll={false}>
               <span className="rounded px-2 py-1 underline-offset-4 transition-colors hover:text-pinkAccent hover:underline hover:shadow-[0_0_8px] hover:shadow-pinkAccent/70">

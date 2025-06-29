@@ -12,12 +12,14 @@ const Footer = () => {
   return (
     <Background color="bg-brand-dark">
       <Section>
-        <div className="text-center text-white">
-          <div className="mb-6 flex justify-center">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between px-4 text-white sm:flex-row">
+          {/* Logo Left */}
+          <div className="mb-4 sm:mb-0">
             <Logo />
           </div>
 
-          <ul className="mb-4 flex flex-wrap justify-center space-x-6 text-sm sm:text-base">
+          {/* Links Right */}
+          <ul className="flex flex-wrap justify-center space-x-6 text-sm sm:text-base">
             <li>
               <Link href="/" scroll={false}>
                 <span className="rounded px-2 py-1 transition hover:text-pinkAccent hover:underline hover:shadow-[0_0_8px] hover:shadow-pinkAccent/70">
@@ -68,11 +70,11 @@ const Footer = () => {
               </Link>
             </li>
           </ul>
+        </div>
 
-          <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} Cybernetic Hawk Ltd. All rights
-            reserved. Registered in the United Kingdom.
-          </p>
+        <div className="mt-4 text-center text-sm text-gray-400">
+          &copy; {new Date().getFullYear()} Cybernetic Hawk Ltd. All rights
+          reserved. Registered in the United Kingdom.
         </div>
       </Section>
     </Background>
