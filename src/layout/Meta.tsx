@@ -23,12 +23,12 @@ const Meta = ({ title, description, canonical }: IMetaProps) => {
         {/* Favicon for Light/Dark Mode - Show dark icon on light theme, light icon on dark theme */}
         <link
           rel="icon"
-          href={`${router.basePath}/favicon-dark.ico`}
+          href={`${router.basePath}/favicon-dark.ico?v=2`}
           media="(prefers-color-scheme: light)"
         />
         <link
           rel="icon"
-          href={`${router.basePath}/favicon-light.ico`}
+          href={`${router.basePath}/favicon-light.ico?v=2`}
           media="(prefers-color-scheme: dark)"
         />
 
@@ -37,21 +37,21 @@ const Meta = ({ title, description, canonical }: IMetaProps) => {
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href={`${router.basePath}/favicon-32x32.png`}
+          href={`${router.basePath}/favicon-32x32.png?v=2`}
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href={`${router.basePath}/favicon-16x16.png`}
+          href={`${router.basePath}/favicon-16x16.png?v=2`}
         />
-        <link rel="shortcut icon" href={`${router.basePath}/favicon.ico`} />
+        <link rel="shortcut icon" href={`${router.basePath}/favicon.ico?v=2`} />
 
         {/* Apple Touch Icon */}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href={`${router.basePath}/apple-touch-icon.png`}
+          href={`${router.basePath}/apple-touch-icon.png?v=2`}
         />
       </Head>
 
