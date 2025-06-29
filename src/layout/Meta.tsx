@@ -20,12 +20,19 @@ const Meta = ({ title, description, canonical }: IMetaProps) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{title}</title>
 
-        {/* Favicon */}
+        {/* Favicon for Light/Dark Mode - Show dark icon on light theme, light icon on dark theme */}
         <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href={`${router.basePath}/apple-touch-icon.png`}
+          rel="icon"
+          href={`${router.basePath}/favicon-dark.ico`}
+          media="(prefers-color-scheme: light)"
         />
+        <link
+          rel="icon"
+          href={`${router.basePath}/favicon-light.ico`}
+          media="(prefers-color-scheme: dark)"
+        />
+
+        {/* Fallback Favicon */}
         <link
           rel="icon"
           type="image/png"
@@ -39,6 +46,13 @@ const Meta = ({ title, description, canonical }: IMetaProps) => {
           href={`${router.basePath}/favicon-16x16.png`}
         />
         <link rel="shortcut icon" href={`${router.basePath}/favicon.ico`} />
+
+        {/* Apple Touch Icon */}
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href={`${router.basePath}/apple-touch-icon.png`}
+        />
       </Head>
 
       <NextSeo
